@@ -6,13 +6,20 @@ export const nodes: Node[] = [
     label: 'G.E. Moore'
   }, {
     id: 'second',
-    label: 'Burtrand Russell'
+    label: 'Logical Empricism and Its End'
   }, {
     id: 'c1',
-    label: 'C1'
+    label: 'Logical Atomism'
   }, {
     id: 'c2',
-    label: 'C2'
+    label: 'Burtrand Russell'
+  },
+  {
+    id: 'c3',
+    label: 'Gottlob Frege'
+  }, {
+    id: 'c4',
+    label: 'Ludwig Wittgenstein'
   }
 ];
 
@@ -20,7 +27,7 @@ export const clusters: ClusterNode[] = [
   {
     id: 'third',
     label: 'C',
-    childNodeIds: ['c1', 'c2']
+    childNodeIds: ['c1', 'c2', 'c3', 'c4']
   }
 ]
 
@@ -29,21 +36,16 @@ export const links: Edge[] = [
     id: 'a',
     source: 'first',
     target: 'second',
-    label: 'is parent of'
+    label: 'Rejection'
   }, {
     id: 'b',
     source: 'first',
-    target: 'c1',
-    label: 'custom label'
+    target: 'c2',
+    label: 'Rejection'
   }, {
     id: 'c',
-    source: 'first',
-    target: 'c1',
-    label: 'custom label'
-  }, {
-    id: 'd',
-    source: 'first',
-    target: 'c2',
-    label: 'custom label'
+    source: 'c2',
+    target: 'c3',
+    label: 'Challenge'
   }
 ];
